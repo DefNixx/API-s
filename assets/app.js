@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000/favoritos"; // URL do JSON Server
+const apiUrl = "http://localhost:3000"; 
 
 async function exibirDadosPais(infoPais) {
     console.log(infoPais);
