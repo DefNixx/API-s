@@ -1,0 +1,52 @@
+{
+  "favoritos": [
+    {
+      "id": "d737",
+      "name": {
+        "common": "Norway"
+      },
+      "flags": {
+        "png": "https://flagcdn.com/w320/no.png"
+      },
+      "capital": [
+        "Oslo"
+      ]
+    },
+    {
+      "id": "9e6b",
+      "name": {
+        "common": "North Korea"
+      },
+      "flags": {
+        "png": "https://flagcdn.com/w320/kp.png"
+      },
+      "capital": [
+        "Pyongyang"
+      ]
+    },
+    {
+      "id": "bed8",
+      "name": {
+        "common": "Finland"
+      },
+      "flags": {
+        "png": "https://flagcdn.com/w320/fi.png"
+      },
+      "capital": [
+        "Helsinki"
+      ]
+    },
+    {
+      "id": "7435",
+      "name": {
+        "common": "Brazil"
+      },
+      "flags": {
+        "png": "https://flagcdn.com/w320/br.png"
+      },
+      "capital": [
+        "Brasília"
+      ]
+    }
+  ]
+}

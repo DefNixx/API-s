@@ -1,0 +1,115 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.country
+{
+    width: 400px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(75, 74, 74, 0.8);
+}
+
+/* Estilizando o Input */
+.country__input
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.country__input::placeholder
+{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.country__input:focus
+{
+    border-bottom: 3px solid #F7DF1E;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Estilizando a bandeira */
+.country__flag
+{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Nome do país */
+.country__name
+{
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Capital do país */
+.country__capital
+{
+    font-size: 24px;
+    font-weight: 200;
+    color: #ddd;
+}
+
+/* Botões */
+.country__button
+{
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(45deg, rgb(234, 255, 0), rgb(179, 255, 3));
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Shlop', sans-serif;
+    color: black;
+}
+
+.country__button:hover
+{
+    box-shadow: 0px 0px 15px rgb(179, 255, 3);
+    transform: translateY(-2px);
+}
+
+/* Efeito de clique */
+.country__button:active
+{
+    transform: scale(0.95);
+}
