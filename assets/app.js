@@ -1,4 +1,4 @@
-const apiUrl = "https://restcountries.com/v3.1/name/${pais}"; 
+const apiUrl = "http://localhost:3000/favoritos"; 
 
 async function exibirDadosPais(infoPais) {
     console.log(infoPais);
@@ -17,6 +17,17 @@ async function obterPais(pais) {
 
 // POST: Adicionar país aos favoritos
 async function adicionarAosFavoritos(pais) {
+    const favoritos = await fetch(apiUrl).then(res => res.json());
+
+    // Verifica se o país já está nos favoritos
+    if (favoritos.some(fav => fav.name.common === pais.name.common)) {
+        alert(`${pais.name.common} já está nos favoritos!`);
+        return;
+    }
+
+    // Cria um ID único para o país
+    pais.id = Math.random().toString(36).substr(2, 9);
+
     const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -32,11 +43,9 @@ async function adicionarAosFavoritos(pais) {
 
 // DELETE: Remover país dos favoritos
 async function removerDosFavoritos(nome) {
-    
-    const response = await fetch(apiUrl);
-    const favoritos = await response.json();
+    const favoritos = await fetch(apiUrl).then(res => res.json());
 
-
+    // Encontra o país pelo nome
     const pais = favoritos.find(p => p.name.common === nome);
 
     if (!pais) {
@@ -44,15 +53,16 @@ async function removerDosFavoritos(nome) {
         return;
     }
 
-    
-    const deleteResponse = await fetch(`${apiUrl}/${pais.id}`, { method: "DELETE" });
+    // Agora deleta pelo ID correto
+    const response = await fetch(`${apiUrl}/${pais.id}`, { method: "DELETE" });
 
-    if (deleteResponse.ok) {
+    if (response.ok) {
         alert(`${nome} removido dos favoritos!`);
     } else {
         alert("Erro ao remover país.");
     }
 }
+
 
 // Evento de busca ao pressionar Enter
 document.getElementById("country-input").addEventListener("keydown", async (evento) => {
