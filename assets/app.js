@@ -1,4 +1,4 @@
-const apiUrl = "https://restcountries.com/v3.1/name/${pais"; 
+const apiUrl = "https://restcountries.com/v3.1/name/${pais}"; 
 
 async function exibirDadosPais(infoPais) {
     console.log(infoPais);
