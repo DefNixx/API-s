@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000"; 
+const apiUrl = "https://restcountries.com/v3.1/name/${pais"; 
 
 async function exibirDadosPais(infoPais) {
     console.log(infoPais);
